@@ -1,0 +1,306 @@
+:root {
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    --gris: #757575;
+    --grisClaro: #DFE9F3;
+}
+
+/*  Globales **/
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    /* Hack para Box Model **/
+    scroll-snap-type: y mandatory;
+}
+
+/** Scroll Snap**/
+.servicios,
+.links__nav-a,
+.formulario {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 16px;
+    /* 1rem = 10px */
+    font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%);
+}
+
+/* Tipografia */
+h1 {
+    font-size: 3.8rem;
+}
+h2 {
+    font-size: 2.8rem;
+}
+h3 {
+    font-size: 1.8rem;
+}
+h1,h2,h3 {
+    text-align: center;
+}
+
+
+/* General */
+
+.boton {
+    color: var(--blanco);
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    background: var(--secundario);
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    text-transform: uppercase;
+    border-radius: .5rem;
+    border: none;
+    width: 100%;
+}
+
+@media (min-width: 768px) { 
+    .boton {
+        width: auto;
+    }
+}
+
+
+
+/* Fin General */
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__titulo {
+    font-size: 3.8rem;
+}
+
+.header__titulo-span {
+    font-size: 2rem;
+}
+
+/* Fin Header */
+
+/* Links */
+
+.links {
+    background-color: var(--secundario)
+}
+
+.links__nav-a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav__a {
+    text-decoration: none;
+    color: var(--blanco);
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.nav__a:hover {
+    background: var(--primario);
+    color: var(--oscuro);
+}
+
+@media (min-width: 768px) { 
+    .links__nav-a {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+/* Fin Nav */
+
+/* Hero */
+
+.hero {
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+    margin-bottom: 20px;
+
+}
+
+.hero__contenido {
+    height: 450px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, .7); 
+    background-color: rgb(0 0 0 / 70%);
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.hero__titulo {
+    color: var(--blanco);
+}
+
+.ubicacion {
+    display: flex;
+    align-items: flex-end;
+}
+
+.ubicacion__p {
+    color: var(--blanco);
+}
+
+
+
+/* Fin Hero */
+
+
+.main {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+
+.main__contenido {
+    background: var(--blanco);
+    box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.48);
+    border-radius: 1rem;
+    padding: 2rem;
+
+}
+
+@media (min-width: 480px) { 
+    .main {
+        max-width: 110rem;
+    }
+}
+
+@media (min-width: 768px) { 
+    .servicios {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.servicio {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio h4 {
+    font-weight: lighter;
+    color: var(--secundario);
+    font-size: 1.8rem;
+}
+
+
+
+.servicio__iconos {
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.iconos__texto {
+    color: var(--oscuro);
+    line-height: 2;
+} 
+
+/* Fin Servicio */
+
+/* Formulario */
+
+.formulario {
+    background-color: var(--gris);
+    width: min(60rem, 100%);
+    
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+
+
+.formulario fieldset {
+    border: none;
+}
+
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--primario);
+}
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo label {
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.campo textarea {
+    height: 20rem;
+}
+
+
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+
+.flex {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Fin Contacto */
+
+/* Footer */
+
+.footer {
+    text-align: center;
+    padding: 10px;
+} 
+
+/* Fin Footer */
+
